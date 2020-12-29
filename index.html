@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <h1 class="text-center py-3 font-weight-bold">Products</h1>
+    <div class="container py-5 font-weight-bold">
+      <div class="form-group">
+        <label for="productNameInput">ProductName :</label>
+        <input class="form-control" type="text" id="productNameInput" />
+      </div>
+
+      <div class="form-group">
+        <label for="productPriceInput">ProductPrice :</label>
+        <input class="form-control" type="number" id="productPriceInput" />
+      </div>
+
+      <div class="form-group">
+        <label for="productCategoryInput">ProductCategory :</label>
+        <input class="form-control" type="text" id="productCategoryInput" />
+      </div>
+
+      <div class="form-group">
+        <label for="productDescInput">ProductDescription :</label>
+        <textarea
+          class="form-control"
+          type="text"
+          id="productDescInput"
+        ></textarea>
+      </div>
+
+      <button id="addBtn" class="btn btn-outline-info float-right">
+        Add product
+      </button>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="container">
+      <input
+        onkeyup="searchProduct(this.value)"
+        type="text"
+        placeholder="search product"
+        class="form-control w-75 m-auto"
+      />
+
+      <table class="table mt-4">
+        <thead>
+          <th>index</th>
+          <th>ProductName</th>
+          <th>ProductPrice</th>
+          <th>ProductCategory</th>
+          <th>ProductDescription</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
